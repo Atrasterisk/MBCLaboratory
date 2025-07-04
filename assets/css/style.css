@@ -63,6 +63,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    background-color: #023e8a;
 }
 
 .nav-links {
@@ -157,7 +158,8 @@ nav {
         position: absolute;
         top: 60px;
         right: 0;
-        background: #fff;
+        background-color: #023e8a;
+        color: #fdf0d5;
         width: 200px;
         display: none;
         box-shadow: 0 2px 8px #0000001a;
@@ -169,10 +171,12 @@ nav {
         display: flex;
     }
     .nav-toggle {
-        display: block;
+        display: none;
     }
     .nav-toggle:checked + .nav-toggle-label + .nav-links {
         display: flex;
+        background-color: #023e8a;
+        color: #fdf0d5;
     }
     .social-links {
         flex-direction: column;
