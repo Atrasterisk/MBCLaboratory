@@ -1,4 +1,3 @@
-// api/process-form.js
 import nodemailer from 'nodemailer';
 
 export default async function handler(req, res) {
@@ -13,7 +12,6 @@ export default async function handler(req, res) {
             },
         });
 
-        // Email content
         const mailOptions = {
             from: `"${nama}" <${email}>`,
             to: 'm.farhan.hafiz.a@gmail.com',
