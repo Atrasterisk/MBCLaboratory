@@ -5,10 +5,10 @@ export default async function handler(req, res) {
         const { nama, email, telepon, subjek, pesan } = req.body; 
 
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
+            service: 'SendGrid',
             auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS,
+                user: 'apikey',
+                pass: process.env.SENDGRID_API_KEY,
             },
         });
 
