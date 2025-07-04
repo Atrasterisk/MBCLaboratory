@@ -1,6 +1,6 @@
-import nodemailer from 'nodemailer';
+const nodemailer = require('nodemailer');
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
     if (req.method === 'POST') {
         const { nama, email, telepon, subjek, pesan } = req.body; 
 
