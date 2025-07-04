@@ -13,15 +13,17 @@ export default async function handler(req, res) {
         });
 
         const mailOptions = {
-            from: `"${nama}" <${email}>`,
+            from: 'm.farhan.hafiz.a@gmail.com',
             to: 'm.farhan.hafiz.a@gmail.com',
+            replyTo: email,
             subject: `Pesan Baru dari Kontak: ${subjek}`,
             text: `
                 Nama: ${nama}
                 Email: ${email}
                 Telepon: ${telepon}
                 Subjek: ${subjek}
-                Pesan:${pesan}
+                Pesan:
+                ${pesan}
             `,
         };
 
