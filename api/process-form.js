@@ -17,12 +17,11 @@ export default async function handler(req, res) {
             to: 'm.farhan.hafiz.a@gmail.com',
             subject: `Pesan Baru dari Kontak: ${subjek}`,
             text: `
-Nama: ${nama}
-Email: ${email}
-Telepon: ${telepon}
-Subjek: ${subjek}
-Pesan:
-${pesan}
+                Nama: ${nama}
+                Email: ${email}
+                Telepon: ${telepon}
+                Subjek: ${subjek}
+                Pesan:${pesan}
             `,
         };
 
