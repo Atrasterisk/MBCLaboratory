@@ -81,6 +81,25 @@ nav {
     z-index: 2;
 }
 
+.nav-toggle-label {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 25px;
+    justify-content: space-between;
+    z-index: 3;
+}
+
+.nav-toggle-label span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background: #333;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
 .hamburger {
     width: 25px;
     height: 3px;
@@ -141,13 +160,19 @@ nav {
         background: #fff;
         width: 200px;
         display: none;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 8px #0000001a;
     }
     .nav-links.active {
         display: flex;
     }
+    .nav-toggle-label {
+        display: flex;
+    }
     .nav-toggle {
         display: block;
+    }
+    .nav-toggle:checked + .nav-toggle-label + .nav-links {
+        display: flex;
     }
     .social-links {
         flex-direction: column;
