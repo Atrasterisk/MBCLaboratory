@@ -1,79 +1,105 @@
-📌 Overview
-This project is an HTML-CSS website application with a backend API for handling contact forms via email using Nodemailer and SendGrid. It is deployed on Vercel with SSL enabled.
+# MBC Laboratory
 
-MBCLaboratory/  
-├── api/  
-│   └── process-form.js     # Backend API for form submission 
-├── assets/ #static assets    
-│   ├── css/
-│   │    └── style.css      # Stylesheet 
-│   └── img/
-│        ├── DSC_8079.JPG
-│        └── logo.png
+A Next.js application with email contact form functionality powered by Nodemailer and SendGrid.
+
+## 📌 Features
+
+- Contact form with email submission
+- Serverless API endpoints
+- Automatic SSL via Vercel
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js v18+
+- npm or yarn
+- SendGrid API key
+
+## 📂 Project Structure
+
+```text
+MBCLaboratory/
+├── api/
+│   └── process-form.js     # Form submission endpoint
+├── assets/    
+│   ├── css/                # CSS module
+│   └── img/                # static image files
 ├── developer.html
 ├── divisilayanan.html
 ├── index.html              # Landing page
 ├── kontak.html
-├── package.json            # Project dependencies & scripts  
-└── README.md               # This documentation
+├── package.json            # Project dependencies
+└── README.md               # This file
+```
 
-🛠️ Local Installation
-Prerequisites
-• Node.js v18+
-• npm / yarn
-• SendGrid API Key (for email functionality)
+## 🛠️ Local Installation
 
-Steps
-1. Clone the repository
-
-      bash
-    git clone https://github.com/Atrasterisk/MBCLaboratory.git
-    cd MBCLaboratory
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Atrasterisk/MBCLaboratory.git
+   cd MBCLaboratory
 
 2. Install dependencies
+   ```bash
+   npm install
+   # or
+   yarn install
 
-      bash
-    npm install
-    # or
-    yarn install
+3. Create environment file
+   ```bash
+   cp .env.example .env.local
+   ```
+   Then edit .env.local with your SendGrid API key.
 
-3. Set up environment variables
-Create a .env.local file in the root directory with:
+4. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
 
-      env
-    SENDGRID_API_KEY=your_sendgrid_api_key
+## 🚀 Deployment
 
-4. Run the development server
+### Automatic Deployment via Git
+- Connect your GitHub repository to Vercel.
+- Vercel will automatically detect Next.js and run:
+  ```bash
+  npm install
+  npm run build
+  npm start (production mode)
 
-      bash
-    npm run dev
-    # or
-    yarn dev
+### Manual Deployment
+#### Build for production
 
-Open http://localhost:3000 to view the app.
+```bash
+npm run build
+```
 
-🚀 Deployment (Vercel)
-Automatic Deployment via Git
-1. Connect your GitHub repository to Vercel.
-2. Vercel will automatically detect Next.js and run:
+#### Deploy to Vercel
 
-    npm install
-    npm run build
-    npm start (production mode)
+- Install Vercel CLI:
 
-🔒 SSL & HTTPS Configuration
+```bash
+npm install -g vercel
+```
+
+- Run:
+```bash
+vercel
+```
+
+Follow the prompts to deploy.
+
+## 🔒 SSL & HTTPS Configuration
 Vercel automatically provides SSL (HTTPS) for all deployments. No extra setup is needed.
 
-📧 Backend (Email API) Configuration
+## 📧 Backend (Email API) Configuration
 The backend API (process-form.js) uses Nodemailer + SendGrid to send emails.
 
-Required Environment Variables
-Variable	        Description	          Example
-SENDGRID_API_KEY	API key from SendGrid	SG.xxxxxx.yyyyyy
+### Required Environment Variables
+| Variable| Description | Example |
+|-------|-----|-----------|
+| SENDGRID_API_KEY | API key from SendGrid | SG.xxxxxx.yyyyyy |
 
-How It Works
-Form Submission → POST request to /api/process-form.
 
-Nodemailer sends the email via SendGrid.
 
-Response → Success/error message in JSON.
+   
