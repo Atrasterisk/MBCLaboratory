@@ -12,7 +12,7 @@ body {
     padding: 20px;
 }
 
-a { color: inherit; text-decoration: none; }
+a { color: #fdf0d5; text-decoration: none; }
 
 header {
     background-color: #03045e;
@@ -76,17 +76,12 @@ nav {
 
 .nav-toggle {
     display: none;
-    background-color: #023e8a;
-    border: #000000;
-    cursor: pointer;
-    z-index: 2;
 }
 
 .nav-toggle-label {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    background-color: #023e8a;
     width: 30px;
     height: 25px;
     justify-content: space-between;
@@ -159,8 +154,7 @@ nav {
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: #023e8a;
-        color: #fdf0d5;
+        background: #fff;
         width: 200px;
         display: none;
         box-shadow: 0 2px 8px #0000001a;
@@ -172,12 +166,10 @@ nav {
         display: flex;
     }
     .nav-toggle {
-        display: none;
+        display: block;
     }
     .nav-toggle:checked + .nav-toggle-label + .nav-links {
         display: flex;
-        background-color: #023e8a;
-        color: #fdf0d5;
     }
     .social-links {
         flex-direction: column;
